@@ -2,14 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Lorem Ipsum</title>
 
     <!-- styles -->
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
   </head>
   <body>
-    <h1>lorem ipsum project</h1>
+    <section class="section-center">
+      <h3>tired of boring lorem ipsum</h3>
+      <!-- Form to get the paragraph number | Number of paragraphs user wants -->
+      <form class="lorem-form">
+        <label for="amount">Paragraphs </label>
+        <input
+          type="number"
+          name="amount"
+          id="amount"
+          placeholder="5"
+          min="1"
+          max="9"
+          required
+        />
+        <button
+          type="submit"
+          class="btn"
+        >
+          Generate
+        </button>
+      </form>
+
+      <!-- Here we'll put the paragraphs dynamically based on the user value for the number of paragraphs -->
+      <article class="lorem-text"></article>
+    </section>
+
     <!-- javascript -->
     <script src="app.js"></script>
   </body>
