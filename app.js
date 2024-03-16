@@ -22,6 +22,12 @@ form.addEventListener("submit", function (e) {
   const paragraphs = parseInt(totalParagraphs.value);
   // console.log(typeof paragraphs);
 
+  if (isNaN(paragraphs) || paragraphs <= 0 || paragraphs > 9) {
+    // For paragraphs less than 0 or greater then 9, we show 1 paragraph
+    result.innerHTML = `<p>${text[0]}</p>`;
+    return;
+  }
+
   const finalText = text.slice(0, paragraphs);
   // console.log(finalText);
 
