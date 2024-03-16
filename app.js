@@ -20,5 +20,18 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const paragraphs = parseInt(totalParagraphs.value);
-  console.log(typeof paragraphs);
+  // console.log(typeof paragraphs);
+
+  const finalText = text.slice(0, paragraphs);
+  // console.log(finalText);
+
+  const finalResult = finalText
+    .map((text) => {
+      return `<p>${text}</p>`;
+    })
+    .join("");
+
+  console.log(finalResult);
+
+  result.innerHTML = finalResult;
 });
