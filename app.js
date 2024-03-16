@@ -22,9 +22,11 @@ form.addEventListener("submit", function (e) {
   const paragraphs = parseInt(totalParagraphs.value);
   // console.log(typeof paragraphs);
 
+  const random = Math.floor(Math.random() * text.length);
+
   if (isNaN(paragraphs) || paragraphs <= 0 || paragraphs > 9) {
     // For paragraphs less than 0 or greater then 9, we show 1 paragraph
-    result.innerHTML = `<p>${text[0]}</p>`;
+    result.innerHTML = `<p>${text[random]}</p>`;
     return;
   }
 
